@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abdullrahmang\\source\\repos\\UI\\UI\\UI.csproj": {}
+    "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abdullrahmang\\source\\repos\\UI\\UI\\UI.csproj": {
+    "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abdullrahmang\\source\\repos\\UI\\UI\\UI.csproj",
+        "projectUniqueName": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\UI.csproj",
         "projectName": "UI",
-        "projectPath": "C:\\Users\\abdullrahmang\\source\\repos\\UI\\UI\\UI.csproj",
+        "projectPath": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\UI.csproj",
         "packagesPath": "C:\\Users\\abdullrahmang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abdullrahmang\\source\\repos\\UI\\UI\\obj\\",
+        "outputPath": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

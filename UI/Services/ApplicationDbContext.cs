@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UI.Models;
+using UI.Models.KYC;
 
 namespace UI.Services
 {
@@ -15,6 +15,35 @@ namespace UI.Services
         public DbSet<InvestmentObjectiveCode> InvestmentObjectiveCodes { get; set; }
         public DbSet<PurposeOfInvestmentCode> PurposeOfInvestmentCodes { get; set; }
         public DbSet<ExpectedTransactionPerMonthRange> ExpectedTransactionPerMonthRanges { get; set; }
+
+        //
+
+        public DbSet<AnnualIncomeRange> AnnualIncomeRanges { get; set; }
+        public DbSet<Bank> Banks { get; set; }
+        public DbSet<Country> Countries { get; set; }
+        public DbSet<Declaration> Declarations { get; set; }
+
+        public DbSet<DocumentType> DocumentTypes { get; set; }
+
+        public DbSet<EducationLevel> EducationLevels { get; set; }
+
+        public DbSet<EmploymentStatus> EmploymentStatuses { get; set; }
+
+        public DbSet<InvestorTypeSetup> InvestorTypeSetups { get; set; }
+
+        public DbSet<NetWorthRange> NetWorthRanges { get; set; }
+
+        public DbSet<Questionnaire> Questionnaires { get; set; }
+
+        public DbSet<RiskAgreement> RiskAgreements { get; set; }
+
+        public DbSet<SocialStatus> SocialStatuses { get; set; }
+
+        public DbSet<SourceOfIncome> SourceOfIncomes { get; set; }
+        public DbSet<SourceOfWealth> SourceOfWealths { get; set; }
+        //
+
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qMbJEyPzeak=",
+  "dgSpecHash": "2hNWX/Dz1do=",
   "success": true,
-  "projectFilePath": "C:\\Users\\abdullrahmang\\source\\repos\\UI\\UI\\UI.csproj",
+  "projectFilePath": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abdullrahmang\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\abdullrahmang\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
