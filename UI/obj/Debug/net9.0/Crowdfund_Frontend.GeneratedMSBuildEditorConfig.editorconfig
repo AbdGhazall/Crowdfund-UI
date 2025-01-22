@@ -1,0 +1,153 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Crowdfund_Frontend
+build_property.RootNamespace = Crowdfund_Frontend
+build_property.ProjectDir = C:\Users\abdullrahmang\source\repos\UI\UI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\abdullrahmang\source\repos\UI\UI
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/ExpectedTransactionPerMonthRanges/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZWN0ZWRUcmFuc2FjdGlvblBlck1vbnRoUmFuZ2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/ExpectedTransactionPerMonthRanges/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZWN0ZWRUcmFuc2FjdGlvblBlck1vbnRoUmFuZ2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/ExpectedTransactionPerMonthRanges/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZWN0ZWRUcmFuc2FjdGlvblBlck1vbnRoUmFuZ2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/ExpectedTransactionPerMonthRanges/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZWN0ZWRUcmFuc2FjdGlvblBlck1vbnRoUmFuZ2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/InvestmentObjectiveCodes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudE9iamVjdGl2ZUNvZGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/InvestmentObjectiveCodes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudE9iamVjdGl2ZUNvZGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/InvestmentObjectiveCodes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudE9iamVjdGl2ZUNvZGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/InvestmentObjectiveCodes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW52ZXN0bWVudE9iamVjdGl2ZUNvZGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/KnowledgeCodes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25vd2xlZGdlQ29kZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/KnowledgeCodes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25vd2xlZGdlQ29kZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/KnowledgeCodes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25vd2xlZGdlQ29kZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/KnowledgeCodes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS25vd2xlZGdlQ29kZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/PurposeOfInvestmentCodes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVycG9zZU9mSW52ZXN0bWVudENvZGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/PurposeOfInvestmentCodes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVycG9zZU9mSW52ZXN0bWVudENvZGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/PurposeOfInvestmentCodes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVycG9zZU9mSW52ZXN0bWVudENvZGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/PurposeOfInvestmentCodes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVycG9zZU9mSW52ZXN0bWVudENvZGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/RiskToleranceCodes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmlza1RvbGVyYW5jZUNvZGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/RiskToleranceCodes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmlza1RvbGVyYW5jZUNvZGVzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/RiskToleranceCodes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmlza1RvbGVyYW5jZUNvZGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/RiskToleranceCodes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmlza1RvbGVyYW5jZUNvZGVzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/StrategyCodes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyYXRlZ3lDb2Rlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/StrategyCodes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyYXRlZ3lDb2Rlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/StrategyCodes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyYXRlZ3lDb2Rlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/StrategyCodes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RyYXRlZ3lDb2Rlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/abdullrahmang/source/repos/UI/UI/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1aakxbcaqn
