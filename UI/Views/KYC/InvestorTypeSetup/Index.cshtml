@@ -1,0 +1,42 @@
+﻿@using UI.Models.KYC
+@model IEnumerable<InvestorTypeSetup>
+
+<h2 class="text-center mb-5 mt-5">Investor Type Setup</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Investor Type</th>
+            <th>Description</th>
+            <th>Arabic Description</th>
+            <th>Max Per Order</th>
+            <th>Max Per Period</th>
+            <th>Period (Months)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.InvestorType</td>
+                <td>@item.Description</td>
+                <td>@item.ArabicDescription</td>
+                <td>@item.MaxPerOrder</td>
+                <td>@item.MaxPerPeriod</td>
+                <td>@item.PeriodInMonths</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.InvestorType })" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                    <a href="@Url.Action("Delete", new { id = item.InvestorType })" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

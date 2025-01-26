@@ -1,0 +1,35 @@
+﻿@using UI.Models.KYC
+@model IEnumerable<Questionnaire>
+
+<h2 class="text-center mb-5 mt-5">Questionnaire List</h2>
+
+<a href="@Url.Action("Create")" class="btn btn-primary mb-4">Create New</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Arabic Title</th>
+            <th>Description</th>
+            <th>Question Type</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.ArabicTitle</td>
+                <td>@item.Description</td>
+                <td>@item.QuestionType.GetDisplayName()</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

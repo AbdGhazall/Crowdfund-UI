@@ -1,0 +1,21 @@
+﻿@using UI.Models.KYC
+@model EducationLevel
+
+<h2 class="mb-5 mt-5">Create Education Level</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group mb-4">
+        @Html.LabelFor(m => m.Level, "Level")
+        @Html.TextBoxFor(m => m.Level, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Level, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group mb-4">
+        @Html.LabelFor(m => m.ArabicLevel, "Arabic Level")
+        @Html.TextBoxFor(m => m.ArabicLevel, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ArabicLevel, null, new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-success">Create</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+}
+

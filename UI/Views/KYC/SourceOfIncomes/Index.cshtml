@@ -1,0 +1,36 @@
+﻿@using UI.Models.KYC
+@model IEnumerable<SourceOfIncome>
+
+<h2 class="text-center mb-5 mt-5">Sources of Income</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Source</th>
+            <th>Arabic Source</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Source</td>
+                <td>@item.ArabicSource</td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                    <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

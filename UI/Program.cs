@@ -8,6 +8,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// for new view folders location
+builder.Services.AddControllersWithViews().AddRazorOptions(options =>
+{
+    options.ViewLocationFormats.Add("/Views/KYC/{1}/{0}.cshtml");
+});
+
+
 
 var app = builder.Build();
 

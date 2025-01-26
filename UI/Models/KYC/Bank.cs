@@ -2,8 +2,8 @@
 {
     public class Bank
     {
-        public int Id { get; internal set; }
-        public string Name { get; internal set; }
-        public string ArabicName { get; internal set; }
+        public int Id { get;  set; }
+        public string Name { get;  set; }
+        public string ArabicName { get;  set; }
     }
 }

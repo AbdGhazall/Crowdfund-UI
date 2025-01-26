@@ -1,13 +1,11 @@
 ﻿@using UI.Models.KYC
-@model IEnumerable<StrategyCode>
+@model IEnumerable<SocialStatus>
 
-<h2 class="text-center mb-5 mt-5">Strategy Codes</h2>
+<h2 class="text-center mb-5 mt-5">Social Statuses</h2>
 
 <div class="row mb-5">
     <div class="col">
         <a href="@Url.Action("Create")" class="btn btn-primary">Create New</a>
-    </div>
-    <div class="col">
     </div>
 </div>
 
@@ -15,8 +13,8 @@
     <thead>
         <tr>
             <th>Id</th>
-            <th>Description</th>
-            <th>Arabic Description</th>
+            <th>Name</th>
+            <th>Arabic Name</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -25,8 +23,8 @@
         {
             <tr>
                 <td>@item.Id</td>
-                <td>@item.Description</td>
-                <td>@item.ArabicDescription</td>
+                <td>@item.Name</td>
+                <td>@item.ArabicName</td>
                 <td>
                     <a href="@Url.Action("Edit", new { id = item.Id })" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
                     <a href="@Url.Action("Delete", new { id = item.Id })" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>

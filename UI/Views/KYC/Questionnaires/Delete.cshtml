@@ -1,0 +1,29 @@
+﻿@using UI.Models.KYC
+@model Questionnaire
+
+<h2 class="mb-5 mt-5">Delete Questionnaire</h2>
+
+<h3 class="mb-3 mt-3">Are you sure you want to delete this?</h3>
+
+<div class="form-group mb-4">
+    <label><strong>Title:</strong> @Model.Title</label>
+</div>
+<div class="form-group mb-4">
+    <label><strong>Arabic Title:</strong> @Model.ArabicTitle</label>
+</div>
+<div class="form-group mb-4">
+    <label><strong>Description:</strong> @Model.Description</label>
+</div>
+<div class="form-group mb-4">
+    <label><strong>Arabic Description:</strong> @Model.ArabicDescription</label>
+</div>
+<div class="form-group mb-4">
+    <label><strong>Question Type:</strong> @Model.QuestionType.GetDisplayName()</label>
+</div>
+
+@using (Html.BeginForm("Delete", "Questionnaires", new { id = Model.Id }))
+{
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+}

@@ -9,7 +9,7 @@ namespace UI.Models.KYC
         public string ArabicTitle { get; set; }
         public string Description { get; set; }
         public QuestionType QuestionType { get; set; }
-        public string ArabicDescription { get; internal set; }
+        public string ArabicDescription { get;  set; }
     }
 
     //question type enum
