@@ -16,7 +16,7 @@ namespace UI.Services
         public DbSet<PurposeOfInvestmentCode> PurposeOfInvestmentCodes { get; set; }
         public DbSet<ExpectedTransactionPerMonthRange> ExpectedTransactionPerMonthRanges { get; set; }
 
-        // // //
+        
 
         public DbSet<AnnualIncomeRange> AnnualIncomeRanges { get; set; }
         public DbSet<Bank> Banks { get; set; }

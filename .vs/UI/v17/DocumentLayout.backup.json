@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\services\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\controllers\\kyc\\annualincomerangescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\controllers\\kyc\\annualincomerangescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\views\\kyc\\employmentstatus\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\views\\kyc\\employmentstatus\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\views\\kyc\\employmentstatus\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\views\\kyc\\employmentstatus\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\controllers\\kyc\\employmentstatuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\controllers\\kyc\\employmentstatuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +42,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Services\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "UI\\Services\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Services\\ApplicationDbContext.cs",
-              "RelativeToolTip": "UI\\Services\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "AnnualIncomeRangesController.cs",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Controllers\\KYC\\AnnualIncomeRangesController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\KYC\\AnnualIncomeRangesController.cs",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Controllers\\KYC\\AnnualIncomeRangesController.cs",
+              "RelativeToolTip": "UI\\Controllers\\KYC\\AnnualIncomeRangesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T07:37:07.702Z",
+              "WhenOpened": "2025-01-27T07:57:30.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Program.cs",
+              "RelativeDocumentMoniker": "UI\\Program.cs",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Program.cs",
+              "RelativeToolTip": "UI\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T07:57:03.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Views\\KYC\\EmploymentStatus\\Edit.cshtml",
+              "RelativeDocumentMoniker": "UI\\Views\\KYC\\EmploymentStatus\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Views\\KYC\\EmploymentStatus\\Edit.cshtml",
+              "RelativeToolTip": "UI\\Views\\KYC\\EmploymentStatus\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-27T07:35:54.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Views\\KYC\\EmploymentStatus\\Create.cshtml",
+              "RelativeDocumentMoniker": "UI\\Views\\KYC\\EmploymentStatus\\Create.cshtml",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Views\\KYC\\EmploymentStatus\\Create.cshtml",
+              "RelativeToolTip": "UI\\Views\\KYC\\EmploymentStatus\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-27T07:35:39.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmploymentStatusController.cs",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Controllers\\KYC\\EmploymentStatusController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\KYC\\EmploymentStatusController.cs",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Controllers\\KYC\\EmploymentStatusController.cs",
+              "RelativeToolTip": "UI\\Controllers\\KYC\\EmploymentStatusController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAuwFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T07:34:31.443Z",
               "EditorCaption": ""
             }
           ]
