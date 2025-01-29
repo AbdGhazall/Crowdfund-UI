@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public string Range { get; set; }
-        public string ArabicRange { get;  set; }
+        public string ArabicRange { get; set; }
     }
 }

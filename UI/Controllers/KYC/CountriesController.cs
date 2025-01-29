@@ -8,15 +8,19 @@ namespace UI.Controllers.KYC
     public class CountriesController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public CountriesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
 
@@ -97,7 +101,6 @@ namespace UI.Controllers.KYC
             return RedirectToAction("Index");
         }
 
-        #endregion
+        #endregion Actions
     }
 }
-

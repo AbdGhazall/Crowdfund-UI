@@ -7,7 +7,6 @@ namespace UI.Controllers.KYC
 {
     public class EmploymentStatusController : Controller
     {
-
         private readonly ApplicationDbContext _context;
 
         public EmploymentStatusController(ApplicationDbContext context)

@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using UI.Models.KYC;
 using UI.Services;
@@ -9,17 +8,22 @@ namespace UI.Controllers.KYC
     public class AnnualIncomeRangesController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public AnnualIncomeRangesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
+
         public ActionResult Index()
         {
             var annualIncomeRanges = _context.AnnualIncomeRanges.OrderByDescending(p => p.Id).ToList();
@@ -89,7 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "AnnualIncomeRanges");
         }
-        #endregion
+
+        #endregion Actions
     }
 }
-

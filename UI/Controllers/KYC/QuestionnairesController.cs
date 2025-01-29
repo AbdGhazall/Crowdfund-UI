@@ -9,15 +9,19 @@ namespace UI.Controllers.KYC
     public class QuestionnairesController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public QuestionnairesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
 
@@ -119,7 +123,6 @@ namespace UI.Controllers.KYC
             return RedirectToAction("Index");
         }
 
-        #endregion
+        #endregion Actions
     }
 }
-

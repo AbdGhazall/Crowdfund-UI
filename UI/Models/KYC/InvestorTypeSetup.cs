@@ -9,6 +9,5 @@
         public decimal MaxPerOrder { get; set; }
         public decimal MaxPerPeriod { get; set; }
         public int PeriodInMonths { get; set; }
-
     }
 }

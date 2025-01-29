@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public string Level { get; set; }
-        public string ArabicLevel { get;  set; }
+        public string ArabicLevel { get; set; }
     }
 }

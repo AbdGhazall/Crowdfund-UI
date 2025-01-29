@@ -8,29 +8,32 @@ namespace UI.Controllers.KYC
     public class NetWorthRangesController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public NetWorthRangesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
+
         public ActionResult Index()
         {
             var netWorthRanges = _context.NetWorthRanges.OrderByDescending(p => p.Id).ToList();
             return View(netWorthRanges);
         }
 
-
         public ActionResult Create()
         {
             return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -45,7 +48,6 @@ namespace UI.Controllers.KYC
             return View(model);
         }
 
-
         public ActionResult Edit(int id)
         {
             var netWorthRanges = _context.NetWorthRanges.Find(id);
@@ -55,7 +57,6 @@ namespace UI.Controllers.KYC
             }
             return View(netWorthRanges);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -70,7 +71,6 @@ namespace UI.Controllers.KYC
             return View(model);
         }
 
-
         public ActionResult Delete(int id)
         {
             var netWorthRanges = _context.NetWorthRanges.Find(id);
@@ -80,7 +80,6 @@ namespace UI.Controllers.KYC
             }
             return View(netWorthRanges);
         }
-
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -94,6 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "NetWorthRanges");
         }
-        #endregion
+
+        #endregion Actions
     }
 }

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace UI.Models.KYC
+﻿namespace UI.Models.KYC
 {
     public class ExpectedTransactionPerMonthRange
     {

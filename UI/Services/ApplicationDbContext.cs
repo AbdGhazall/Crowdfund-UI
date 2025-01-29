@@ -1,13 +1,15 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using UI.Models;
 using UI.Models.KYC;
 
 namespace UI.Services
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        
-
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+        }
 
         public DbSet<StrategyCode> StrategyCodes { get; set; }
         public DbSet<KnowledgeCode> KnowledgeCodes { get; set; }
@@ -15,8 +17,6 @@ namespace UI.Services
         public DbSet<InvestmentObjectiveCode> InvestmentObjectiveCodes { get; set; }
         public DbSet<PurposeOfInvestmentCode> PurposeOfInvestmentCodes { get; set; }
         public DbSet<ExpectedTransactionPerMonthRange> ExpectedTransactionPerMonthRanges { get; set; }
-
-        
 
         public DbSet<AnnualIncomeRange> AnnualIncomeRanges { get; set; }
         public DbSet<Bank> Banks { get; set; }
@@ -41,14 +41,13 @@ namespace UI.Services
 
         public DbSet<SourceOfIncome> SourceOfIncomes { get; set; }
         public DbSet<SourceOfWealth> SourceOfWealths { get; set; }
-        
-
-
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+
             builder.Entity<StrategyCode>().ToTable("KYC_StrategyCode").HasKey(x => x.Id);
-            builder.Entity<StrategyCode>().Property(x=>x.Description).IsRequired().HasMaxLength(200);
+            builder.Entity<StrategyCode>().Property(x => x.Description).IsRequired().HasMaxLength(200);
             builder.Entity<StrategyCode>().Property(x => x.ArabicDescription).IsRequired().HasMaxLength(200);
 
             builder.Entity<KnowledgeCode>().ToTable("KYC_KnowledgeCode").HasKey(x => x.Id);
@@ -131,7 +130,6 @@ namespace UI.Services
             builder.Entity<RiskAgreement>().Property(a => a.ArabicTitle).HasMaxLength(500);
             builder.Entity<RiskAgreement>().Property(a => a.ArabicDescription).HasMaxLength(500);
 
-
             builder.Entity<SocialStatus>().ToTable("KYC_SocialStatus").HasKey(x => x.Id);
             builder.Entity<SocialStatus>().Property(x => x.Name).HasMaxLength(50);
             builder.Entity<SocialStatus>().Property(x => x.ArabicName).HasMaxLength(50);
@@ -143,9 +141,6 @@ namespace UI.Services
             builder.Entity<SourceOfWealth>().ToTable("KYC_SourceOfWealth").HasKey(i => i.Id);
             builder.Entity<SourceOfWealth>().Property(i => i.Source).HasMaxLength(50);
             builder.Entity<SourceOfWealth>().Property(i => i.ArabicSource).HasMaxLength(50);
-
-
         }
     }
 }
-    

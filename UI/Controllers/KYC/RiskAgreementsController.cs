@@ -8,17 +8,22 @@ namespace UI.Controllers.KYC
     public class RiskAgreementsController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public RiskAgreementsController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
+
         public ActionResult Index()
         {
             var riskAgreements = _context.RiskAgreements.OrderByDescending(p => p.Id).ToList();
@@ -88,7 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "RiskAgreements");
         }
-        #endregion
+
+        #endregion Actions
     }
 }
-

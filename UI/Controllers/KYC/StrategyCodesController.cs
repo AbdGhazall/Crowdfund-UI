@@ -8,29 +8,32 @@ namespace UI.Controllers.KYC
     public class StrategyCodesController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public StrategyCodesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
+
         public ActionResult Index()
         {
             var strategyCodes = _context.StrategyCodes.OrderByDescending(p => p.Id).ToList();
             return View(strategyCodes);
         }
 
-
         public ActionResult Create()
         {
             return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -45,7 +48,6 @@ namespace UI.Controllers.KYC
             return View(model);
         }
 
-
         public ActionResult Edit(int id)
         {
             var strategyCode = _context.StrategyCodes.Find(id);
@@ -55,7 +57,6 @@ namespace UI.Controllers.KYC
             }
             return View(strategyCode);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -70,7 +71,6 @@ namespace UI.Controllers.KYC
             return View(model);
         }
 
-
         public ActionResult Delete(int id)
         {
             var strategyCode = _context.StrategyCodes.Find(id);
@@ -80,7 +80,6 @@ namespace UI.Controllers.KYC
             }
             return View(strategyCode);
         }
-
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -94,6 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "StrategyCodes");
         }
-        #endregion
+
+        #endregion Actions
     }
 }

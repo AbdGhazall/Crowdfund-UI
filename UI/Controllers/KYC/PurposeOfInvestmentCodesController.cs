@@ -8,17 +8,22 @@ namespace UI.Controllers.KYC
     public class PurposeOfInvestmentCodesController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public PurposeOfInvestmentCodesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
+
         public ActionResult Index()
         {
             var purposeOfInvestmentCodes = _context.PurposeOfInvestmentCodes.OrderByDescending(p => p.Id).ToList();
@@ -88,6 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "PurposeOfInvestmentCodes");
         }
-        #endregion
+
+        #endregion Actions
     }
 }

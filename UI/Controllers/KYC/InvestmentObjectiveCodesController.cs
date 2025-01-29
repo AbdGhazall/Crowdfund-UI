@@ -8,29 +8,32 @@ namespace UI.Controllers.KYC
     public class InvestmentObjectiveCodesController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public InvestmentObjectiveCodesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
+
         public ActionResult Index()
         {
             var investmentObjectiveCodes = _context.InvestmentObjectiveCodes.OrderByDescending(p => p.Id).ToList();
             return View(investmentObjectiveCodes);
         }
 
-
         public ActionResult Create()
         {
             return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -45,7 +48,6 @@ namespace UI.Controllers.KYC
             return View(model);
         }
 
-
         public ActionResult Edit(int id)
         {
             var investmentObjectiveCode = _context.InvestmentObjectiveCodes.Find(id);
@@ -55,7 +57,6 @@ namespace UI.Controllers.KYC
             }
             return View(investmentObjectiveCode);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -70,7 +71,6 @@ namespace UI.Controllers.KYC
             return View(model);
         }
 
-
         public ActionResult Delete(int id)
         {
             var investmentObjectiveCode = _context.InvestmentObjectiveCodes.Find(id);
@@ -80,7 +80,6 @@ namespace UI.Controllers.KYC
             }
             return View(investmentObjectiveCode);
         }
-
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -94,7 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "InvestmentObjectiveCodes");
         }
-        #endregion
+
+        #endregion Actions
     }
 }
-

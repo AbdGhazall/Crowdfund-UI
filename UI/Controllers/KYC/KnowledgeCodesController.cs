@@ -8,29 +8,32 @@ namespace UI.Controllers.KYC
     public class KnowledgeCodesController : Controller
     {
         #region Fields
+
         private readonly ApplicationDbContext _context;
-        #endregion
+
+        #endregion Fields
 
         #region Constructor
+
         public KnowledgeCodesController(ApplicationDbContext context)
         {
             _context = context;
         }
-        #endregion
+
+        #endregion Constructor
 
         #region Actions
+
         public ActionResult Index()
         {
             var knowledgeCodes = _context.KnowledgeCodes.OrderByDescending(p => p.Id).ToList();
             return View(knowledgeCodes);
         }
 
-
         public ActionResult Create()
         {
             return View();
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -45,7 +48,6 @@ namespace UI.Controllers.KYC
             return View(model);
         }
 
-
         public ActionResult Edit(int id)
         {
             var knowledgeCode = _context.KnowledgeCodes.Find(id);
@@ -55,7 +57,6 @@ namespace UI.Controllers.KYC
             }
             return View(knowledgeCode);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -70,7 +71,6 @@ namespace UI.Controllers.KYC
             return View(model);
         }
 
-
         public ActionResult Delete(int id)
         {
             var knowledgeCode = _context.KnowledgeCodes.Find(id);
@@ -80,7 +80,6 @@ namespace UI.Controllers.KYC
             }
             return View(knowledgeCode);
         }
-
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -94,7 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "KnowledgeCodes");
         }
-        #endregion
+
+        #endregion Actions
     }
 }
-

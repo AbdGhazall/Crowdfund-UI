@@ -85,4 +85,3 @@ namespace UI.Controllers.KYC
         }
     }
 }
-

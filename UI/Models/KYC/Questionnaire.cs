@@ -9,7 +9,7 @@ namespace UI.Models.KYC
         public string ArabicTitle { get; set; }
         public string Description { get; set; }
         public QuestionType QuestionType { get; set; }
-        public string ArabicDescription { get;  set; }
+        public string ArabicDescription { get; set; }
     }
 
     //question type enum
@@ -17,10 +17,13 @@ namespace UI.Models.KYC
     {
         [Description("Characters(Max:200)")]
         Text = 1,
+
         [Description("Date")]
         Date = 2,
+
         [Description("Numeric, Decimal, Double")]
         Number = 3,
+
         [Description("0 or 1")]
         Boolean = 4
     }
