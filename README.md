@@ -6,7 +6,9 @@ when don't change anything
 ![image](https://github.com/user-attachments/assets/9ff08760-8120-40b9-b2d5-f65da1266980)  
 when edit username  
 ![image](https://github.com/user-attachments/assets/7967351d-302f-4ae0-ab6a-1ba846b3246d)  
-![image](https://github.com/user-attachments/assets/b8a30e75-de66-4459-9ec9-b2a9cae79374)
+![image](https://github.com/user-attachments/assets/b8a30e75-de66-4459-9ec9-b2a9cae79374)  
+![image](https://github.com/user-attachments/assets/9ec6b436-dbba-40fe-b664-9fdd2ecd2952)
+
 
 
 
