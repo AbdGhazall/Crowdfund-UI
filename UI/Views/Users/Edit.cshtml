@@ -1,0 +1,55 @@
+﻿@using UI.Models
+@model ApplicationUser
+
+@using (Html.BeginForm("Edit", "Users", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.Id) <!-- Keep User ID hidden -->
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserName)
+        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PhoneNumber)
+        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.BirthDate)
+        @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control", type = "date" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CivilId)
+        @Html.TextBoxFor(model => model.CivilId, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PACIId)
+        @Html.TextBoxFor(model => model.PACIId, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.PlaceOfBirthId, "Place of Birth")
+        @Html.DropDownListFor(model => model.PlaceOfBirthId, ViewBag.PlacesOfBirth as SelectList, "-- Select Country --", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SocialStatusId, "Social Status")
+        @Html.DropDownListFor(model => model.SocialStatusId, ViewBag.SocialStatuses as SelectList, "-- Select Status --", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.InvestorTypeId, "Investor Type")
+        @Html.DropDownListFor(model => model.InvestorTypeId, ViewBag.InvestorTypes as SelectList, "-- Select Investor Type --", new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+}
+

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UI.Services;
 
@@ -11,9 +12,11 @@ using UI.Services;
 namespace UI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250204071610_createMethod")]
+    partial class createMethod
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -167,6 +170,7 @@ namespace UI.Migrations
                         .HasColumnType("date");
 
                     b.Property<string>("CivilId")
+                        .IsRequired()
                         .HasMaxLength(12)
                         .HasColumnType("nvarchar(12)");
 
@@ -184,8 +188,10 @@ namespace UI.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("InvestorTypeId")
-                        .HasColumnType("int");
+                    b.Property<string>("InvestorType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("IsClassified")
                         .HasColumnType("bit");
@@ -235,8 +241,6 @@ namespace UI.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("InvestorTypeId");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -307,6 +311,7 @@ namespace UI.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ArabicName")
+                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -477,11 +482,11 @@ namespace UI.Migrations
 
             modelBuilder.Entity("UI.Models.KYC.InvestorTypeSetup", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<string>("InvestorType")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValue("Retail");
 
                     b.Property<string>("ArabicDescription")
                         .IsRequired()
@@ -501,13 +506,6 @@ namespace UI.Migrations
                         .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
-
-                    b.Property<string>("InvestorType")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasDefaultValue("Retail");
 
                     b.Property<decimal>("MaxPerOrder")
                         .ValueGeneratedOnAdd()
@@ -533,7 +531,7 @@ namespace UI.Migrations
                         .HasColumnType("int")
                         .HasDefaultValue(12);
 
-                    b.HasKey("Id");
+                    b.HasKey("InvestorType");
 
                     b.ToTable("KYC_InvestorTypeSetup", (string)null);
                 });
@@ -856,10 +854,6 @@ namespace UI.Migrations
 
             modelBuilder.Entity("UI.Models.ApplicationUser", b =>
                 {
-                    b.HasOne("UI.Models.KYC.InvestorTypeSetup", "InvestorType")
-                        .WithMany()
-                        .HasForeignKey("InvestorTypeId");
-
                     b.HasOne("UI.Models.KYC.Country", "PlaceOfBirth")
                         .WithMany()
                         .HasForeignKey("PlaceOfBirthId")
@@ -871,8 +865,6 @@ namespace UI.Migrations
                         .HasForeignKey("SocialStatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("InvestorType");
 
                     b.Navigation("PlaceOfBirth");
 

@@ -7,6 +7,10 @@ namespace UI.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        public ApplicationUser()
+        {
+        }
+
         public DateTime CreatedAt { get; private set; } = DateTime.UtcNow.AddHours(3);
 
         [DataType(DataType.Date)]
@@ -14,14 +18,18 @@ namespace UI.Models
 
         [MaxLength(12)]
         [MinLength(12)]
-        public string CivilId { get; set; }
+        public string? CivilId { get; set; }
 
         [MaxLength(50)]
         public string PACIId { get; set; } = string.Empty;
 
         public bool IsClassified { get; set; } = false;
-        public int? PlaceOfBirthId { get; internal set; }
-        public int SocialStatusId { get; internal set; }
+
+        public int PlaceOfBirthId { get; set; }
+
+        public int SocialStatusId { get; set; }
+
+        public int? InvestorTypeId { get; set; }
 
         [ForeignKey("PlaceOfBirthId")]
         public virtual Country PlaceOfBirth { get; set; }
@@ -29,7 +37,7 @@ namespace UI.Models
         [ForeignKey("SocialStatusId")]
         public virtual SocialStatus SocialStatus { get; set; }
 
-        [MaxLength(50)]
-        public string InvestorType { get; internal set; } = "Retail";
+        [ForeignKey("InvestorTypeId")]
+        public virtual InvestorTypeSetup InvestorType { get; set; }
     }
 }

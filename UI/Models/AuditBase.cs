@@ -1,4 +1,4 @@
-﻿namespace UI.Models.KYC
+﻿namespace UI.Models
 {
     public class AuditBase
     {

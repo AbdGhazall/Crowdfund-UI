@@ -102,7 +102,7 @@ namespace UI.Services
             builder.Entity<EmploymentStatus>().Property(i => i.Status).HasMaxLength(50);
             builder.Entity<EmploymentStatus>().Property(i => i.ArabicStatus).HasMaxLength(50);
 
-            builder.Entity<InvestorTypeSetup>().ToTable("KYC_InvestorTypeSetup").HasKey(x => x.InvestorType);
+            builder.Entity<InvestorTypeSetup>().ToTable("KYC_InvestorTypeSetup").HasKey(x => x.Id);
             builder.Entity<InvestorTypeSetup>().Property(a => a.InvestorType).HasMaxLength(50).HasDefaultValue("Retail");
             builder.Entity<InvestorTypeSetup>().Property(a => a.Description).HasMaxLength(1000);
             builder.Entity<InvestorTypeSetup>().Property(a => a.ArabicDescription).HasMaxLength(1000);

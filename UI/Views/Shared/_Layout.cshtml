@@ -52,10 +52,16 @@
                                 <li><a class="dropdown-item" href="@Url.Action("Index", "SourceOfWealthes")">Source Of Wealthes</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Index", "InvestorTypeSetup")">Investor Type Setup</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Index", "Questionnaires")">Questionnaires</a></li>
+								@* <li><a class="dropdown-item" href="@Url.Action("Index", "Users")">Users</a></li> *@
                             </ul>
                         </li>
+						
+							
+						
                     </ul>
                     <partial name="_LoginPartial">
+                     <a class="dropdown-item" href="@Url.Action("Index", "Users")">Users</a>
+ 
                 </div>
             </div>
         </nav>

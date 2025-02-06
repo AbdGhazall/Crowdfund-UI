@@ -1,0 +1,52 @@
+﻿@model ApplicationUser
+
+@using (Html.BeginForm("Edit", "Users", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <!-- Username -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserName)
+        @Html.EditorFor(model => model.UserName)
+        @Html.ValidationMessageFor(model => model.UserName)
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.EditorFor(model => model.Email)
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <!-- Phone Number -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.PhoneNumber)
+        @Html.EditorFor(model => model.PhoneNumber)
+        @Html.ValidationMessageFor(model => model.PhoneNumber)
+    </div>
+
+    <!-- Place of Birth Dropdown -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.PlaceOfBirthId)
+        @Html.DropDownListFor(model => model.PlaceOfBirthId, (SelectList)ViewBag.PlacesOfBirth, "Select a Place of Birth")
+        @Html.ValidationMessageFor(model => model.PlaceOfBirthId)
+    </div>
+
+    <!-- Social Status Dropdown -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.SocialStatusId)
+        @Html.DropDownListFor(model => model.SocialStatusId, (SelectList)ViewBag.SocialStatuses, "Select a Social Status")
+        @Html.ValidationMessageFor(model => model.SocialStatusId)
+    </div>
+
+    <!-- Investor Type Dropdown -->
+    <div class="form-group">
+        @Html.LabelFor(model => model.InvestorTypeId)
+        @Html.DropDownListFor(model => model.InvestorTypeId, (SelectList)ViewBag.InvestorTypes, "Select an Investor Type")
+        @Html.ValidationMessageFor(model => model.InvestorTypeId)
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+}
+
