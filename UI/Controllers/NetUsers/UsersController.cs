@@ -56,6 +56,7 @@ namespace UI.Controllers
                     PlaceOfBirthId = model.PlaceOfBirthId,
                     SocialStatusId = model.SocialStatusId,
                     InvestorTypeId = model.InvestorTypeId // Store selected Investor Type
+                    PasswordHash= model.Password
                 };
 
                 var result = await _userManager.CreateAsync(user);
