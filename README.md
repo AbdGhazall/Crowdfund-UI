@@ -4,7 +4,7 @@
 ![image](https://github.com/user-attachments/assets/d707abb6-7244-4e00-a377-e40ea75c9e88)  
 when don't change anything
 ![image](https://github.com/user-attachments/assets/9ff08760-8120-40b9-b2d5-f65da1266980)  
-when edit username
+when edit username  
 ![image](https://github.com/user-attachments/assets/7967351d-302f-4ae0-ab6a-1ba846b3246d)  
 
 
