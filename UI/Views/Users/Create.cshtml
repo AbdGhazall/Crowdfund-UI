@@ -1,52 +1,63 @@
-﻿@model ApplicationUser
+﻿@using UI.Models
+@model RegisterViewModel
 
-@using (Html.BeginForm("Edit", "Users", FormMethod.Post))
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
 
-    <!-- Username -->
-    <div class="form-group">
-        @Html.LabelFor(model => model.UserName)
-        @Html.EditorFor(model => model.UserName)
-        @Html.ValidationMessageFor(model => model.UserName)
-    </div>
-
-    <!-- Email -->
     <div class="form-group">
         @Html.LabelFor(model => model.Email)
-        @Html.EditorFor(model => model.Email)
-        @Html.ValidationMessageFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserName)
+        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
     </div>
 
-    <!-- Phone Number -->
     <div class="form-group">
         @Html.LabelFor(model => model.PhoneNumber)
-        @Html.EditorFor(model => model.PhoneNumber)
-        @Html.ValidationMessageFor(model => model.PhoneNumber)
+        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
     </div>
 
-    <!-- Place of Birth Dropdown -->
     <div class="form-group">
-        @Html.LabelFor(model => model.PlaceOfBirthId)
-        @Html.DropDownListFor(model => model.PlaceOfBirthId, (SelectList)ViewBag.PlacesOfBirth, "Select a Place of Birth")
-        @Html.ValidationMessageFor(model => model.PlaceOfBirthId)
+        @Html.LabelFor(model => model.BirthDate)
+        @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control", type = "date" })
     </div>
 
-    <!-- Social Status Dropdown -->
     <div class="form-group">
-        @Html.LabelFor(model => model.SocialStatusId)
-        @Html.DropDownListFor(model => model.SocialStatusId, (SelectList)ViewBag.SocialStatuses, "Select a Social Status")
-        @Html.ValidationMessageFor(model => model.SocialStatusId)
+        @Html.LabelFor(model => model.CivilId)
+        @Html.TextBoxFor(model => model.CivilId, new { @class = "form-control" })
     </div>
 
-    <!-- Investor Type Dropdown -->
     <div class="form-group">
-        @Html.LabelFor(model => model.InvestorTypeId)
-        @Html.DropDownListFor(model => model.InvestorTypeId, (SelectList)ViewBag.InvestorTypes, "Select an Investor Type")
-        @Html.ValidationMessageFor(model => model.InvestorTypeId)
+        @Html.LabelFor(model => model.PACIId)
+        @Html.TextBoxFor(model => model.PACIId, new { @class = "form-control" })
     </div>
 
-    <!-- Submit Button -->
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <div class="form-group">
+        @Html.LabelFor(model => model.PlaceOfBirthId, "Place of Birth")
+        @Html.DropDownListFor(model => model.PlaceOfBirthId, ViewBag.PlacesOfBirth as SelectList, "-- Select Country --", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SocialStatusId, "Social Status")
+        @Html.DropDownListFor(model => model.SocialStatusId, ViewBag.SocialStatuses as SelectList, "-- Select Status --", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.InvestorTypeId, "Investor Type")
+        @Html.DropDownListFor(model => model.InvestorTypeId, ViewBag.InvestorTypes as SelectList, "-- Select Investor Type --", new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Password)
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ConfirmPassword)
+        @Html.PasswordFor(model => model.ConfirmPassword, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
 }
-

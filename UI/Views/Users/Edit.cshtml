@@ -1,55 +1,78 @@
-﻿@using UI.Models
-@model ApplicationUser
+﻿@model ApplicationUser
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<h2>Edit User</h2>
 
 @using (Html.BeginForm("Edit", "Users", FormMethod.Post))
 {
     @Html.AntiForgeryToken()
-    @Html.HiddenFor(model => model.Id) <!-- Keep User ID hidden -->
+    @Html.HiddenFor(model => model.Id)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserName)
+        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+    </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.Email)
-        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(model => model.UserName)
-        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control" })
+        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.PhoneNumber)
-        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control" })
+        @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.BirthDate)
-        @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control", type = "date" })
+        @Html.EditorFor(model => model.BirthDate, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+        @Html.ValidationMessageFor(model => model.BirthDate, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.CivilId)
-        @Html.TextBoxFor(model => model.CivilId, new { @class = "form-control" })
+        @Html.EditorFor(model => model.CivilId, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.CivilId, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
         @Html.LabelFor(model => model.PACIId)
-        @Html.TextBoxFor(model => model.PACIId, new { @class = "form-control" })
+        @Html.EditorFor(model => model.PACIId, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.PACIId, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.PlaceOfBirthId, "Place of Birth")
-        @Html.DropDownListFor(model => model.PlaceOfBirthId, ViewBag.PlacesOfBirth as SelectList, "-- Select Country --", new { @class = "form-control" })
+        @Html.LabelFor(model => model.PlaceOfBirthId)
+        @Html.DropDownListFor(model => model.PlaceOfBirthId, (SelectList)ViewBag.PlacesOfBirth, "Select a Place of Birth", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.PlaceOfBirthId, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.SocialStatusId, "Social Status")
-        @Html.DropDownListFor(model => model.SocialStatusId, ViewBag.SocialStatuses as SelectList, "-- Select Status --", new { @class = "form-control" })
+        @Html.LabelFor(model => model.SocialStatusId)
+        @Html.DropDownListFor(model => model.SocialStatusId, (SelectList)ViewBag.SocialStatuses, "Select a Social Status", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SocialStatusId, "", new { @class = "text-danger" })
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.InvestorTypeId, "Investor Type")
-        @Html.DropDownListFor(model => model.InvestorTypeId, ViewBag.InvestorTypes as SelectList, "-- Select Investor Type --", new { @class = "form-control" })
+        @Html.LabelFor(model => model.InvestorTypeId)
+        @Html.DropDownListFor(model => model.InvestorTypeId, (SelectList)ViewBag.InvestorTypes, "Select an Investor Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.InvestorTypeId, "", new { @class = "text-danger" })
     </div>
 
-    <button type="submit" class="btn btn-primary">Save Changes</button>
+    <div class="form-check">
+        <label class="form-check-label">
+            @Html.CheckBoxFor(model => model.IsClassified, new { @class = "form-check-input" }) Classified
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Cancel</a>
 }
+
 

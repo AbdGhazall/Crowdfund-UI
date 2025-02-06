@@ -75,13 +75,18 @@ namespace UI.Controllers
 
         public async Task<IActionResult> Edit(string id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
             var user = await _userManager.FindByIdAsync(id);
             if (user == null)
             {
                 return NotFound();
             }
 
-            // Pass the lists for dropdowns
+            // Populate dropdowns
             ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name", user.PlaceOfBirthId);
             ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name", user.SocialStatusId);
             ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "InvestorType", user.InvestorTypeId);
@@ -93,54 +98,52 @@ namespace UI.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, ApplicationUser model)
         {
-            if (!ModelState.IsValid)
-            {
-                // Repopulate dropdown lists in case of errors
-                ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name", model.PlaceOfBirthId);
-                ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name", model.SocialStatusId);
-                ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "InvestorType", model.InvestorTypeId);
-
-                return View(model);
-            }
-
-            var user = await _userManager.FindByIdAsync(id);
-            if (user == null)
+            if (id != model.Id)
             {
                 return NotFound();
             }
 
-            // Update the user object
-            user.UserName = model.UserName;
-            user.Email = model.Email;
-            user.PhoneNumber = model.PhoneNumber;
-            user.BirthDate = model.BirthDate;
-            user.CivilId = model.CivilId;
-            user.PACIId = model.PACIId;
-            user.IsClassified = model.IsClassified;
-            user.PlaceOfBirthId = model.PlaceOfBirthId;
-            user.SocialStatusId = model.SocialStatusId;
-            user.InvestorTypeId = model.InvestorTypeId;
-
-            var result = await _userManager.UpdateAsync(user);
-            if (result.Succeeded)
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index");
-            }
-            else
-            {
-                // If update fails, add errors to ModelState and repopulate dropdowns
-                foreach (var error in result.Errors)
+                var user = await _userManager.FindByIdAsync(id);
+                if (user == null)
                 {
-                    ModelState.AddModelError("", error.Description);
+                    return NotFound();
                 }
 
-                // Repopulate dropdown lists in case of errors
-                ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name", model.PlaceOfBirthId);
-                ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name", model.SocialStatusId);
-                ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "InvestorType", model.InvestorTypeId);
+                // Update fields
+                user.UserName = model.UserName;
+                user.Email = model.Email;
+                user.PhoneNumber = model.PhoneNumber;
+                user.BirthDate = model.BirthDate;
+                user.CivilId = model.CivilId;
+                user.PACIId = model.PACIId;
+                user.IsClassified = model.IsClassified;
+                user.PlaceOfBirthId = model.PlaceOfBirthId;
+                user.SocialStatusId = model.SocialStatusId;
+                user.InvestorTypeId = model.InvestorTypeId;
 
-                return View(model);
+                var result = await _userManager.UpdateAsync(user);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    foreach (var error in result.Errors)
+                    {
+                        ModelState.AddModelError("", error.Description);
+                    }
+                }
             }
+
+            // Repopulate dropdowns in case of errors
+            ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name", model.PlaceOfBirthId);
+            ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name", model.SocialStatusId);
+            ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "InvestorType", model.InvestorTypeId);
+
+            return View(model);
         }
+
     }
 }
