@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iAjc+p2Lbk6Tx4bfRQELJnvMtuZTkEOmrJFpzUxGhps=",
+  "Hash": "qvhmqxsoKeGF2snyHD5sVgA1G2SwSAWIt/nT9z1o4M0=",
   "Source": "UI",
   "BasePath": "_content/UI",
   "Mode": "Default",
@@ -2117,12 +2117,12 @@
       "OriginalItemSpec": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-h45ckcxh2d.gz",
+      "Identity": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-349k9ahhb2.gz",
       "SourceId": "UI",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/UI",
-      "RelativePath": "css/site#[.{fingerprint=h45ckcxh2d}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=349k9ahhb2}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -2131,8 +2131,8 @@
       "RelatedAsset": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "3wmuz9t7n9",
-      "Integrity": "Yyb6kXSdOTNr6gjYUPkULdziQ6AAKw2Zc3Jxf2IkY/0=",
+      "Fingerprint": "rj3v74t9p2",
+      "Integrity": "SdWVbbD/0feRMftGP5oMrMdjjglXlaBwEF4RnQDNO3w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\wwwroot\\css\\site.css"
@@ -4042,8 +4042,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h45ckcxh2d",
-      "Integrity": "D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4=",
+      "Fingerprint": "349k9ahhb2",
+      "Integrity": "3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -5353,6 +5353,167 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.349k9ahhb2.css",
+      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-349k9ahhb2.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000969932105"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1030"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SdWVbbD/0feRMftGP5oMrMdjjglXlaBwEF4RnQDNO3w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 09 Feb 2025 09:25:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "349k9ahhb2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.349k9ahhb2.css",
+      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3206"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 09 Feb 2025 09:25:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "349k9ahhb2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.349k9ahhb2.css.gz",
+      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-349k9ahhb2.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1030"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SdWVbbD/0feRMftGP5oMrMdjjglXlaBwEF4RnQDNO3w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 09 Feb 2025 09:25:01 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "349k9ahhb2"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SdWVbbD/0feRMftGP5oMrMdjjglXlaBwEF4RnQDNO3w="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "C:\\Users\\abdullrahmang\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\9.0.0\\staticwebassets\\css\\site.css",
       "Selectors": [],
@@ -5391,12 +5552,12 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-h45ckcxh2d.gz",
+      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-349k9ahhb2.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002036659878"
+          "Quality": "0.000969932105"
         }
       ],
       "ResponseHeaders": [
@@ -5406,15 +5567,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "490"
+          "Value": "1030"
         },
         {
           "Name": "ETag",
-          "Value": "\"Yyb6kXSdOTNr6gjYUPkULdziQ6AAKw2Zc3Jxf2IkY/0=\""
+          "Value": "\"SdWVbbD/0feRMftGP5oMrMdjjglXlaBwEF4RnQDNO3w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:02:19 GMT"
+          "Value": "Sun, 09 Feb 2025 09:25:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5434,13 +5595,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4=\""
+          "Value": "W/\"3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4="
+          "Value": "sha256-3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE="
         }
       ]
     },
@@ -5455,7 +5616,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1348"
+          "Value": "3206"
         },
         {
           "Name": "Content-Type",
@@ -5463,11 +5624,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4=\""
+          "Value": "\"3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:02:19 GMT"
+          "Value": "Sun, 09 Feb 2025 09:25:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5477,13 +5638,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4="
+          "Value": "sha256-3TPbgClxTHb8ayWChTXB9++A67vRgfIBQ3dloZ/mjHE="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-h45ckcxh2d.gz",
+      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-349k9ahhb2.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5492,7 +5653,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "490"
+          "Value": "1030"
         },
         {
           "Name": "Content-Type",
@@ -5500,11 +5661,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Yyb6kXSdOTNr6gjYUPkULdziQ6AAKw2Zc3Jxf2IkY/0=\""
+          "Value": "\"SdWVbbD/0feRMftGP5oMrMdjjglXlaBwEF4RnQDNO3w=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:02:19 GMT"
+          "Value": "Sun, 09 Feb 2025 09:25:01 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5522,168 +5683,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Yyb6kXSdOTNr6gjYUPkULdziQ6AAKw2Zc3Jxf2IkY/0="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.h45ckcxh2d.css",
-      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-h45ckcxh2d.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.002036659878"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "490"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Yyb6kXSdOTNr6gjYUPkULdziQ6AAKw2Zc3Jxf2IkY/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:02:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "h45ckcxh2d"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.h45ckcxh2d.css",
-      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1348"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:02:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "h45ckcxh2d"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-D8fdycStiIWrUXkKBq2/CLvLp1cGKbLdFwC4IjyjRO4="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.h45ckcxh2d.css.gz",
-      "AssetFile": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\obj\\Debug\\net9.0\\compressed\\bwgyuxq6h9-h45ckcxh2d.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "490"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Yyb6kXSdOTNr6gjYUPkULdziQ6AAKw2Zc3Jxf2IkY/0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 09 Feb 2025 08:02:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "h45ckcxh2d"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Yyb6kXSdOTNr6gjYUPkULdziQ6AAKw2Zc3Jxf2IkY/0="
+          "Value": "sha256-SdWVbbD/0feRMftGP5oMrMdjjglXlaBwEF4RnQDNO3w="
         }
       ]
     },

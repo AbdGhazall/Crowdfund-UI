@@ -586,7 +586,6 @@ C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\comp
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
-C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\compressed\bwgyuxq6h9-h45ckcxh2d.gz
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\compressed\q39ixk5u59-61n19gt1b8.gz
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\compressed\dmuzicriml-lkla6qhjhf.gz
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\compressed\ba6spaxn4z-p999rwzg0f.gz
@@ -666,3 +665,4 @@ C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\refi
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\UI.pdb
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\UI.genruntimeconfig.cache
 C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\ref\UI.dll
+C:\Users\abdullrahmang\Desktop\from GitHub\Crowdfund-UI\UI\obj\Debug\net9.0\compressed\bwgyuxq6h9-349k9ahhb2.gz

@@ -65,13 +65,8 @@ namespace UI.Controllers
                     IsClassified = model.IsClassified,
                     PlaceOfBirthId = model.PlaceOfBirthId,
                     SocialStatusId = model.SocialStatusId,
-<<<<<<< HEAD
                     InvestorTypeId = model.InvestorTypeId,// Store selected Investor Type
                     PasswordHash = model.Password
-=======
-                    InvestorTypeId = model.InvestorTypeId // Store selected Investor Type
-                    PasswordHash= model.Password
->>>>>>> 225c841f35aba0e69523f0aa268a613885b7612b
                 };
 
                 var result = await _userManager.CreateAsync(user);

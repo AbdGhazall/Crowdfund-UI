@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR8ob1D4dsd8/U4GrV9BpBWT/49T5E7ex2CIWsmM4" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-7mGCI4V6z8SdFplSmixukVZoGqKfYz/x8F8VI/dJb/lRhAv8t7/2xXt4rEZoH1fb" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
 </head>
 <body>
     <header>
@@ -25,12 +24,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
                                 Menu
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="@Url.Action("Index", "Home")">Home</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Privacy","Home")">Privacy</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Index", "StrategyCodes")">Strategy Codes</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Index", "RiskToleranceCodes")">Risk Tolerance Codes</a></li>
@@ -52,16 +53,15 @@
                                 <li><a class="dropdown-item" href="@Url.Action("Index", "SourceOfWealthes")">Source Of Wealthes</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Index", "InvestorTypeSetup")">Investor Type Setup</a></li>
                                 <li><a class="dropdown-item" href="@Url.Action("Index", "Questionnaires")">Questionnaires</a></li>
-								@* <li><a class="dropdown-item" href="@Url.Action("Index", "Users")">Users</a></li> *@
                             </ul>
                         </li>
-						
-							
-						
+                        
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Index", "Users")">Users</a>
+                        </li>
                     </ul>
-                    <partial name="_LoginPartial">
-                     <a class="dropdown-item" href="@Url.Action("Index", "Users")">Users</a>
- 
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
@@ -73,11 +73,6 @@
         </main>
     </div>
 
-    @* <footer class="border-top footer text-muted"> *@
-    @*     <div class="container"> *@
-    @*         &copy; 2025 - Croudfund Frontend *@
-    @*     </div> *@
-    @* </footer> *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
