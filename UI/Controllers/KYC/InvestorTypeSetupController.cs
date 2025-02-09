@@ -7,12 +7,22 @@ namespace UI.Controllers.KYC
 {
     public class InvestorTypeSetupController : Controller
     {
+        #region Fields
+
         private readonly ApplicationDbContext _context;
+
+        #endregion Fields
+
+        #region constructor
 
         public InvestorTypeSetupController(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        #endregion constructor
+
+        #region Actions
 
         public IActionResult Index()
         {
@@ -83,5 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "InvestorTypeSetup");
         }
+
+        #endregion Actions
     }
 }

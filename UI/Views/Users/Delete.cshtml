@@ -1,20 +1,17 @@
-﻿@using UI.Models
-@model ApplicationUser
+﻿@model UI.Models.ApplicationUser
 
 <h2>Delete User</h2>
+<h3>Are you sure you want to delete this user?</h3>
+
 <div>
-    <h3>Are you sure you want to delete this user?</h3>
     <p><strong>Username:</strong> @Model.UserName</p>
     <p><strong>Email:</strong> @Model.Email</p>
-    <p><strong>Place of Birth:</strong> @Model.PlaceOfBirth.Name</p>
-    <p><strong>Social Status:</strong> @Model.SocialStatus.Name</p>
-
-    <!-- Form to confirm deletion -->
-    @using (Html.BeginForm("Delete", "Users", FormMethod.Post))
-    {
-        @Html.AntiForgeryToken()
-        @Html.HiddenFor(m => m.Id)  <!-- Hidden field for User ID -->
-        <button type="submit" class="btn btn-danger">Confirm Delete</button>
-        <a href="@Url.Action("Index", "Users")" class="btn btn-secondary">Cancel</a>
-    }
+    <p><strong>Birth Date:</strong> @Model.BirthDate.ToString("yyyy-MM-dd")</p>
 </div>
+
+<form asp-action="ConfirmDelete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
+

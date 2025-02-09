@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,19 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Views\\Users\\Create.cshtml",
-              "RelativeDocumentMoniker": "UI\\Views\\Users\\Create.cshtml",
-              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Views\\Users\\Create.cshtml",
-              "RelativeToolTip": "UI\\Views\\Users\\Create.cshtml",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwD4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-06T11:17:18.095Z",
-              "EditorCaption": ""
             }
           ]
         }

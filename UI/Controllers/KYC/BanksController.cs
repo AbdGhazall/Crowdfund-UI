@@ -7,12 +7,22 @@ namespace UI.Controllers.KYC
 {
     public class BanksController : Controller
     {
+        #region fields
+
         private readonly ApplicationDbContext _context;
+
+        #endregion fields
+
+        #region Constructor
 
         public BanksController(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        #endregion Constructor
+
+        #region Actions
 
         // Index
         public IActionResult Index()
@@ -90,5 +100,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index");
         }
+
+        #endregion Actions
     }
 }

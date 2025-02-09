@@ -9,14 +9,24 @@ namespace UI.Controllers
 {
     public class UsersController : Controller
     {
+        #region fields
+
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _context;
+
+        #endregion fields
+
+        #region ctor
 
         public UsersController(UserManager<ApplicationUser> userManager, ApplicationDbContext context)
         {
             _userManager = userManager;
             _context = context;
         }
+
+        #endregion ctor
+
+        #region actions
 
         public IActionResult Index()
         {
@@ -55,7 +65,8 @@ namespace UI.Controllers
                     IsClassified = model.IsClassified,
                     PlaceOfBirthId = model.PlaceOfBirthId,
                     SocialStatusId = model.SocialStatusId,
-                    InvestorTypeId = model.InvestorTypeId // Store selected Investor Type
+                    InvestorTypeId = model.InvestorTypeId,// Store selected Investor Type
+                    PasswordHash = model.Password
                 };
 
                 var result = await _userManager.CreateAsync(user);
@@ -86,17 +97,29 @@ namespace UI.Controllers
                 return NotFound();
             }
 
+            var model = new EditViewModel
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                Email = user.Email,
+                PhoneNumber = user.PhoneNumber,
+                BirthDate = user.BirthDate,
+                PlaceOfBirthId = user.PlaceOfBirthId,
+                SocialStatusId = user.SocialStatusId,
+                InvestorTypeId = (int)user.InvestorTypeId
+            };
+
             // Populate dropdowns
             ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name", user.PlaceOfBirthId);
             ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name", user.SocialStatusId);
             ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "InvestorType", user.InvestorTypeId);
 
-            return View(user);
+            return View(model); // Return EditViewModel instead of ApplicationUser
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, ApplicationUser model)
+        public async Task<IActionResult> Edit(string id, EditViewModel model)
         {
             if (id != model.Id)
             {
@@ -116,9 +139,6 @@ namespace UI.Controllers
                 user.Email = model.Email;
                 user.PhoneNumber = model.PhoneNumber;
                 user.BirthDate = model.BirthDate;
-                user.CivilId = model.CivilId;
-                user.PACIId = model.PACIId;
-                user.IsClassified = model.IsClassified;
                 user.PlaceOfBirthId = model.PlaceOfBirthId;
                 user.SocialStatusId = model.SocialStatusId;
                 user.InvestorTypeId = model.InvestorTypeId;
@@ -145,5 +165,44 @@ namespace UI.Controllers
             return View(model);
         }
 
+        // GET: Users/Delete/{id}
+        public async Task<IActionResult> Delete(string id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        // POST: Users/ConfirmDelete/{id}
+        [HttpPost, ActionName("ConfirmDelete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> ConfirmDelete(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            ModelState.AddModelError("", "Error deleting user");
+            return View("Delete", user);
+        }
+
+        #endregion actions
     }
 }

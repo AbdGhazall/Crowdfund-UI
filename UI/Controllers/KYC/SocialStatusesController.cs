@@ -7,12 +7,22 @@ namespace UI.Controllers.KYC
 {
     public class SocialStatusesController : Controller
     {
+        #region fields
+
         private readonly ApplicationDbContext _context;
+
+        #endregion fields
+
+        #region constructor
 
         public SocialStatusesController(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        #endregion constructor
+
+        #region Actions
 
         public ActionResult Index()
         {
@@ -83,5 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "SocialStatuses");
         }
+
+        #endregion Actions
     }
 }

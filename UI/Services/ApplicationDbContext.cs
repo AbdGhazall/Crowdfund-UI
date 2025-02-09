@@ -70,8 +70,6 @@ namespace UI.Services
             builder.Entity<ExpectedTransactionPerMonthRange>().Property(x => x.Description).IsRequired().HasMaxLength(200);
             builder.Entity<ExpectedTransactionPerMonthRange>().Property(x => x.ArabicDescription).IsRequired().HasMaxLength(200);
 
-            //14 more tables
-
             builder.Entity<AnnualIncomeRange>().ToTable("KYC_AnnualIncomeRange").HasKey(i => i.Id);
             builder.Entity<AnnualIncomeRange>().Property(i => i.Range).HasMaxLength(50);
             builder.Entity<AnnualIncomeRange>().Property(i => i.ArabicRange).HasMaxLength(50);

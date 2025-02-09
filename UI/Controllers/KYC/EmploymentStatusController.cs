@@ -7,12 +7,22 @@ namespace UI.Controllers.KYC
 {
     public class EmploymentStatusController : Controller
     {
+        #region fileds
+
         private readonly ApplicationDbContext _context;
+
+        #endregion fileds
+
+        #region Constructor
 
         public EmploymentStatusController(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        #endregion Constructor
+
+        #region Actions
 
         public ActionResult Index()
         {
@@ -83,5 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "EmploymentStatus");
         }
+
+        #endregion Actions
     }
 }

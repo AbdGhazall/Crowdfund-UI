@@ -7,12 +7,22 @@ namespace UI.Controllers.KYC
 {
     public class SourceOfIncomesController : Controller
     {
+        #region fields
+
         private readonly ApplicationDbContext _context;
+
+        #endregion fields
+
+        #region constructor
 
         public SourceOfIncomesController(ApplicationDbContext context)
         {
             _context = context;
         }
+
+        #endregion constructor
+
+        #region actions
 
         public ActionResult Index()
         {
@@ -83,5 +93,7 @@ namespace UI.Controllers.KYC
             }
             return RedirectToAction("Index", "SourceOfIncomes");
         }
+
+        #endregion actions
     }
 }
