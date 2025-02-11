@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using UI.Models;
 using UI.Models.KYC;
+using UI.Models.Users_KYC;
 
 namespace UI.Services
 {
@@ -42,9 +43,21 @@ namespace UI.Services
         public DbSet<SourceOfIncome> SourceOfIncomes { get; set; }
         public DbSet<SourceOfWealth> SourceOfWealths { get; set; }
 
+        public DbSet<EmploymentDetails> EmploymentDetails { get; set; }
+
+        public DbSet<FinancialInfo> FinancialInfos { get; set; }
+
+        public DbSet<PersonalInfo> PersonalInfos { get; set; }
+
+        public DbSet<UserAddress> UserAddresses { get; set; }
+
+        public DbSet<IndividualKYC> IndividualKYCs { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            KYCConfigurations(builder);
+            IndividualKYC(builder);
 
             builder.Entity<StrategyCode>().ToTable("KYC_StrategyCode").HasKey(x => x.Id);
             builder.Entity<StrategyCode>().Property(x => x.Description).IsRequired().HasMaxLength(200);
@@ -139,6 +152,45 @@ namespace UI.Services
             builder.Entity<SourceOfWealth>().ToTable("KYC_SourceOfWealth").HasKey(i => i.Id);
             builder.Entity<SourceOfWealth>().Property(i => i.Source).HasMaxLength(50);
             builder.Entity<SourceOfWealth>().Property(i => i.ArabicSource).HasMaxLength(50);
+
+            builder.Entity<FinancialInfo>().ToTable("User_KYC_FinancialInfo").HasKey(i => i.Id);
+            builder.Entity<FinancialInfo>().Property(i => i.MonthlyIncome).HasPrecision(18, 3);
+
+            builder.Entity<PersonalInfo>().ToTable("User_KYC_PersonalInfo").HasKey(i => i.Id);
+            builder.Entity<PersonalInfo>().Property(a => a.EmployeerName).HasMaxLength(200);
+            builder.Entity<PersonalInfo>().Property(a => a.EmployeerAddress).HasMaxLength(200);
+            builder.Entity<PersonalInfo>().Property(a => a.EmployeerContactDetails).HasMaxLength(500);
+            builder.Entity<PersonalInfo>().Property(a => a.Designation).HasMaxLength(200);
+
+            builder.Entity<UserAddress>().ToTable("User_Address").HasKey(q => q.UserId);
+            builder.Entity<UserAddress>().Property(q => q.HouseOrBuildingNo).HasMaxLength(10);
+            builder.Entity<UserAddress>().Property(q => q.City).HasMaxLength(50);
+            builder.Entity<UserAddress>().Property(q => q.Area).HasMaxLength(50);
+            builder.Entity<UserAddress>().Property(q => q.Block).HasMaxLength(50);
+            builder.Entity<UserAddress>().Property(q => q.Street).HasMaxLength(50);
+            builder.Entity<UserAddress>().Property(q => q.Floor).HasMaxLength(50);
+            builder.Entity<UserAddress>().Property(q => q.Apartment).HasMaxLength(50);
+            builder.Entity<UserAddress>().Property(q => q.PostalCode).HasMaxLength(50);
+        }
+
+        private static void KYCConfigurations(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IndividualKYC>(entity =>
+                {
+                    entity.HasOne<EmploymentDetails>()
+                          .WithOne()
+                          .HasForeignKey<IndividualKYC>(i => i.EmploymentDetailsId)
+                          .HasConstraintName("FK_IndKYC_EmpDetails");
+                });
+        }
+
+        private static void IndividualKYC(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<IndividualKYC>().ToTable("User_KYC_Individual");
+            modelBuilder.Entity<IndividualKYC>().HasKey(i => i.UserId);
+
+            modelBuilder.Entity<EmploymentDetails>().ToTable("User_KYC_Employment");
+            modelBuilder.Entity<EmploymentDetails>().HasKey(e => e.Id);
         }
     }
 }

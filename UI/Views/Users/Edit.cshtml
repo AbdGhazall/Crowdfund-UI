@@ -22,7 +22,6 @@
 
     <div class="form-group">
         @Html.LabelFor(model => model.BirthDate)
-        @* @Html.TextBoxFor(model => model.BirthDate, new { @class = "form-control", type = "date" }) *@
         <input asp-for="BirthDate" type="date" class="form-control" value="@Model.BirthDate.ToString("yyyy-MM-dd")" />
 
     </div>

@@ -32,9 +32,9 @@
                 <td>@user.UserName</td>
                 <td>@user.CivilId</td>
                 <td>@user.PACIId</td>
-                <td>@user.PlaceOfBirthId</td>
-                <td>@user.SocialStatusId</td>
-                <td>@user.InvestorTypeId</td>
+                <td>@user.PlaceOfBirth?.Name</td> @*showing selected value not Id*@
+                <td>@user.SocialStatus?.Name</td>
+                <td>@user.InvestorType?.InvestorType</td>
                 <td>
                     <a href="@Url.Action("Edit", new { id = user.Id })" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
                     <a href="@Url.Action("Delete", new { id = user.Id })" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
