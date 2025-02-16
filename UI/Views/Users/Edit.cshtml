@@ -1,10 +1,12 @@
-﻿@model EditViewModel
+﻿@using UI.Models.ViewModels
+@model EditViewModel
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    @Html.HiddenFor(model => model.Id) 
+    @Html.HiddenFor(model => model.Id)
 
+    <!-- Main Form Fields -->
     <div class="form-group">
         @Html.LabelFor(model => model.Email)
         @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
@@ -23,7 +25,6 @@
     <div class="form-group">
         @Html.LabelFor(model => model.BirthDate)
         <input asp-for="BirthDate" type="date" class="form-control" value="@Model.BirthDate.ToString("yyyy-MM-dd")" />
-
     </div>
 
     <div class="form-group">
@@ -41,6 +42,82 @@
         @Html.DropDownListFor(model => model.InvestorTypeId, ViewBag.InvestorTypes as SelectList, "-- Select Investor Type --", new { @class = "form-control" })
     </div>
 
-    <button type="submit" class="btn btn-success">Save Changes</button>
-    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    <!-- Tabs for Additional Information -->
+    <ul class="nav nav-tabs mt-4" id="userTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="basic-info-tab" data-bs-toggle="tab" data-bs-target="#basic-info" type="button" role="tab" aria-controls="basic-info" aria-selected="true">
+                Basic Info
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="employment-tab" data-bs-toggle="tab" data-bs-target="#employment" type="button" role="tab" aria-controls="employment" aria-selected="false">
+                Employment Details
+            </button>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-3" id="userTabsContent">
+        <!-- Basic Info Tab -->
+        <div class="tab-pane fade show active" id="basic-info" role="tabpanel" aria-labelledby="basic-info-tab">
+            <!-- Existing form fields are already rendered above -->
+        </div>
+
+        <!-- Employment Details Tab -->
+        <div class="tab-pane fade" id="employment" role="tabpanel" aria-labelledby="employment-tab">
+            <h4>Employment Details</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Employee</th>
+                        <th>Self Employed</th>
+                        <th>Unemployed</th>
+                        <th>Retired</th>
+                        <th>Student</th>
+                        <th>Housewife</th>
+                        <th>Others</th>
+                        <th>Employer</th>
+                        <th>Job Title</th>
+                        <th>Work Address</th>
+                        <th>Nature of Business</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.EmploymentDetails != null)
+                    {
+                        <tr>
+                            <td>@Model.EmploymentDetails.Employee</td>
+                            <td>@Model.EmploymentDetails.SelfEmployed</td>
+                            <td>@Model.EmploymentDetails.Unemployed</td>
+                            <td>@Model.EmploymentDetails.Retired</td>
+                            <td>@Model.EmploymentDetails.Student</td>
+                            <td>@Model.EmploymentDetails.Housewife</td>
+                            <td>@Model.EmploymentDetails.Others</td>
+                            <td>@Model.EmploymentDetails.Employer</td>
+                            <td>@Model.EmploymentDetails.JobTitle</td>
+                            <td>@Model.EmploymentDetails.WorkAddress</td>
+                            <td>@Model.EmploymentDetails.NatureOfBusiness</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="11" class="text-center">No employment details found.</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Save and Cancel Buttons -->
+    <div class="mt-4">
+        <button type="submit" class="btn btn-success">Save Changes</button>
+        <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+    </div>
+}
+
+<!-- Bootstrap JS for Tabs -->
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 }

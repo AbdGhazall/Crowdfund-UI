@@ -1,9 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using UI.Models.Users_KYC;
 
-namespace UI.Models
+namespace UI.Models.ViewModels
 {
-    public class RegisterViewModel
+    public class EditViewModel
+
     {
+        public EditViewModel()
+        {
+            EmploymentDetails = new EmploymentDetails();
+        }
+
+        [Required]
+        public string Id { get; set; }
+
         [Required]
         [EmailAddress]
         public string Email { get; set; }
@@ -16,15 +26,8 @@ namespace UI.Models
 
         [Required]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateOnly BirthDate { get; set; }
-
-        [MaxLength(12)]
-        public string? CivilId { get; set; }
-
-        [MaxLength(50)]
-        public string PACIId { get; set; } = string.Empty;
-
-        public bool IsClassified { get; set; }
 
         [Required]
         public int PlaceOfBirthId { get; set; }
@@ -35,13 +38,6 @@ namespace UI.Models
         [Required]
         public int InvestorTypeId { get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
-
-        [Required]
-        [DataType(DataType.Password)]
-        [Compare("Password", ErrorMessage = "Passwords do not match.")]
-        public string ConfirmPassword { get; set; }
+        public EmploymentDetails EmploymentDetails { get; set; }
     }
 }

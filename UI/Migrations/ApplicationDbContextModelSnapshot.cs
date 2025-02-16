@@ -184,6 +184,9 @@ namespace UI.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("EmploymentDetailsId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("InvestorTypeId")
                         .HasColumnType("int");
 
@@ -235,6 +238,8 @@ namespace UI.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmploymentDetailsId");
 
                     b.HasIndex("InvestorTypeId");
 
@@ -900,8 +905,9 @@ namespace UI.Migrations
                     b.Property<bool>("Unemployed")
                         .HasColumnType("bit");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("WorkAddress")
                         .IsRequired()
@@ -909,6 +915,8 @@ namespace UI.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("User_KYC_Employment", (string)null);
                 });
@@ -1108,6 +1116,10 @@ namespace UI.Migrations
 
             modelBuilder.Entity("UI.Models.ApplicationUser", b =>
                 {
+                    b.HasOne("UI.Models.Users_KYC.EmploymentDetails", "EmploymentDetails")
+                        .WithMany()
+                        .HasForeignKey("EmploymentDetailsId");
+
                     b.HasOne("UI.Models.KYC.InvestorTypeSetup", "InvestorType")
                         .WithMany()
                         .HasForeignKey("InvestorTypeId");
@@ -1124,6 +1136,8 @@ namespace UI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("EmploymentDetails");
+
                     b.Navigation("InvestorType");
 
                     b.Navigation("PlaceOfBirth");
@@ -1137,6 +1151,17 @@ namespace UI.Migrations
                         .WithOne()
                         .HasForeignKey("UI.Models.IndividualKYC", "EmploymentDetailsId")
                         .HasConstraintName("FK_IndKYC_EmpDetails");
+                });
+
+            modelBuilder.Entity("UI.Models.Users_KYC.EmploymentDetails", b =>
+                {
+                    b.HasOne("UI.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("UI.Models.Users_KYC.FinancialInfo", b =>

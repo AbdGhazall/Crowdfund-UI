@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using System.Reflection.Emit;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using UI.Models;
 using UI.Models.KYC;
@@ -58,6 +59,9 @@ namespace UI.Services
             base.OnModelCreating(builder);
             KYCConfigurations(builder);
             IndividualKYC(builder);
+
+
+            
 
             builder.Entity<StrategyCode>().ToTable("KYC_StrategyCode").HasKey(x => x.Id);
             builder.Entity<StrategyCode>().Property(x => x.Description).IsRequired().HasMaxLength(200);

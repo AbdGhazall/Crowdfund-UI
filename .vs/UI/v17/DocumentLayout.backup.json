@@ -1,7 +1,28 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\controllers\\netusers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\controllers\\netusers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\models\\viewmodels\\editviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\models\\viewmodels\\editviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\models\\users_kyc\\employmentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\models\\users_kyc\\employmentdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|c:\\users\\abdullrahmang\\desktop\\from github\\crowdfund-ui\\ui\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{587BCFD6-56D9-4E5B-97EE-0BBA5A6C4BDD}|UI\\UI.csproj|solutionrelative:ui\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +30,78 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Controllers\\NetUsers\\UsersController.cs",
+              "RelativeDocumentMoniker": "UI\\Controllers\\NetUsers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Controllers\\NetUsers\\UsersController.cs",
+              "RelativeToolTip": "UI\\Controllers\\NetUsers\\UsersController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAgwIAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T06:32:32.085Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Models\\ViewModels\\EditViewModel.cs",
+              "RelativeDocumentMoniker": "UI\\Models\\ViewModels\\EditViewModel.cs",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Models\\ViewModels\\EditViewModel.cs",
+              "RelativeToolTip": "UI\\Models\\ViewModels\\EditViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T10:40:30.088Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Views\\Users\\Edit.cshtml",
+              "RelativeDocumentMoniker": "UI\\Views\\Users\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Views\\Users\\Edit.cshtml",
+              "RelativeToolTip": "UI\\Views\\Users\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-16T10:36:55.93Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "UI\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "UI\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T10:35:39.632Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmploymentDetails.cs",
+              "DocumentMoniker": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Models\\Users_KYC\\EmploymentDetails.cs",
+              "RelativeDocumentMoniker": "UI\\Models\\Users_KYC\\EmploymentDetails.cs",
+              "ToolTip": "C:\\Users\\abdullrahmang\\Desktop\\from GitHub\\Crowdfund-UI\\UI\\Models\\Users_KYC\\EmploymentDetails.cs",
+              "RelativeToolTip": "UI\\Models\\Users_KYC\\EmploymentDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-16T10:35:18.943Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"

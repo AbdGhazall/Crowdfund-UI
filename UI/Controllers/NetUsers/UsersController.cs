@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using UI.Models;
+using UI.Models.Users_KYC;
+using UI.Models.ViewModels;
 using UI.Services;
 
 namespace UI.Controllers
@@ -31,11 +33,11 @@ namespace UI.Controllers
         public IActionResult Index()
         {
             var users = _context.Users
-                .Include(u => u.PlaceOfBirth)
-                .Include(u => u.SocialStatus)
-                .Include(u => u.InvestorType)
-                .OrderByDescending(p => p.Id)
-                .ToList();
+                 .Include(u => u.PlaceOfBirth)
+                 .Include(u => u.SocialStatus)
+                 .Include(u => u.InvestorType)
+                 .OrderByDescending(p => p.Id)
+                 .ToList();
             return View(users);
         }
 
@@ -65,7 +67,7 @@ namespace UI.Controllers
                     IsClassified = model.IsClassified,
                     PlaceOfBirthId = model.PlaceOfBirthId,
                     SocialStatusId = model.SocialStatusId,
-                    InvestorTypeId = model.InvestorTypeId,// Store selected Investor Type
+                    InvestorTypeId = model.InvestorTypeId,
                     PasswordHash = model.Password
                 };
 
@@ -76,7 +78,6 @@ namespace UI.Controllers
                 }
             }
 
-            // Repopulate dropdown lists in case of errors
             ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name", model.PlaceOfBirthId);
             ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name", model.SocialStatusId);
             ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "InvestorType", model.InvestorTypeId);
@@ -84,37 +85,51 @@ namespace UI.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Edit(string id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
 
-            var user = await _userManager.FindByIdAsync(id);
+
+
+        public IActionResult Edit(string id)
+        {
+            var user = _context.Users
+             .Include(u => u.PlaceOfBirth)
+             .Include(u => u.SocialStatus)
+             .Include(u => u.InvestorType)
+
+             .FirstOrDefault(u => u.Id.Equals(id));
+
             if (user == null)
             {
                 return NotFound();
             }
 
-            var model = new EditViewModel
+            //retrive with null always
+            var employmentDetailsRecord = _context.EmploymentDetails
+                .Where(e => e.UserId.Equals(id))
+                .FirstOrDefault();
+
+
+
+            var viewModel = new EditViewModel
             {
                 Id = user.Id,
-                UserName = user.UserName,
                 Email = user.Email,
+                UserName = user.UserName,
                 PhoneNumber = user.PhoneNumber,
                 BirthDate = user.BirthDate,
                 PlaceOfBirthId = user.PlaceOfBirthId,
                 SocialStatusId = user.SocialStatusId,
-                InvestorTypeId = (int)user.InvestorTypeId
+                InvestorTypeId = (int)user.InvestorTypeId,
+                EmploymentDetails = employmentDetailsRecord //null
+
+
+
             };
 
-            // Populate dropdowns
-            ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name", user.PlaceOfBirthId);
-            ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name", user.SocialStatusId);
-            ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "InvestorType", user.InvestorTypeId);
+            ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name");
+            ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name");
+            ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "Name");
 
-            return View(model); // Return EditViewModel instead of ApplicationUser
+            return View(viewModel);
         }
 
         [HttpPost]
@@ -134,7 +149,6 @@ namespace UI.Controllers
                     return NotFound();
                 }
 
-                // Update fields
                 user.UserName = model.UserName;
                 user.Email = model.Email;
                 user.PhoneNumber = model.PhoneNumber;
@@ -157,7 +171,6 @@ namespace UI.Controllers
                 }
             }
 
-            // Repopulate dropdowns in case of errors
             ViewBag.PlacesOfBirth = new SelectList(_context.Countries, "Id", "Name", model.PlaceOfBirthId);
             ViewBag.SocialStatuses = new SelectList(_context.SocialStatuses, "Id", "Name", model.SocialStatusId);
             ViewBag.InvestorTypes = new SelectList(_context.InvestorTypeSetups, "Id", "InvestorType", model.InvestorTypeId);
@@ -165,7 +178,9 @@ namespace UI.Controllers
             return View(model);
         }
 
-        // GET: Users/Delete/{id}
+
+
+
         public async Task<IActionResult> Delete(string id)
         {
             if (id == null)
@@ -182,7 +197,6 @@ namespace UI.Controllers
             return View(user);
         }
 
-        // POST: Users/ConfirmDelete/{id}
         [HttpPost, ActionName("ConfirmDelete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ConfirmDelete(string id)

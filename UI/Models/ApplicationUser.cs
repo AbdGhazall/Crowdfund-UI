@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity;
 using UI.Models.KYC;
+using UI.Models.Users_KYC;
 
 namespace UI.Models
 {
@@ -39,5 +40,12 @@ namespace UI.Models
 
         [ForeignKey("InvestorTypeId")]
         public virtual InvestorTypeSetup InvestorType { get; set; }
+
+        //public int? EmploymentDetailsId { get; set; } // Foreign key to EmploymentDetails
+
+        //[ForeignKey("EmploymentDetailsId")]
+        //public virtual EmploymentDetails EmploymentDetails { get; set; }
+
+        //public virtual ICollection<EmploymentDetails> EmploymentDetails { get; set; }
     }
 }
